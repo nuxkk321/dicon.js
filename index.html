@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+		.inline_box .choose_file_btn{
+			cursor:pointer;
+			background-color:#eee;
+			width:90px;
+			height:90px;
+			position: relative;
+
+		}
+		.inline_box .choose_file_btn img{
+			max-width:100%;
+			max-height:100%;
+			display: block;
+			margin: auto;
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+		}
+    </style>
+</head>
+<body>
+    
+    <div class="t1">
+		<div class="inline_box">
+			<a class="close_file" href="javascript:void(0)">
+				<img src="" alt="关闭"/>
+			</a>
+			<div class="choose_file_btn" >
+				<img src=""/>
+			</div>
+			<input type="file" name="deal_attachment[]" 
+				class="choose_file" style="display:none"/>
+			<label class="box_bottom">
+				<span class="box_bottom_text"></span>
+			</label>
+		</div>    
+	</div>
+    <div   class="t2">
+
+    </div>
+    <div class="t3">
+
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.12.4.min.js" ></script>
+<script type="text/javascript" src="dicon.js"></script>
+<script type="text/javascript">
+    $(function(){
+		var add_btn_img_base64=dicon('add-lg');
+		$('.choose_file_btn img').attr('src',add_btn_img_base64);
+		
+		var close_btn_img_base64=dicon('close-lg');
+		$('.close_file img').attr('src',close_btn_img_base64);
+		
+		
+		
+    });
+</script>
+
+</html>
